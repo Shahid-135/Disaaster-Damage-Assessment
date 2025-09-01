@@ -79,5 +79,48 @@ We enhance interpretability by incorporating:
 These explainable features provide **transparent justifications** for model predictions — critical for trust and adoption in disaster response.
 
 ---
+## Requirements  
+
+To set up the environment for **MGLTC-Net**, install the following dependencies:  
+
+### Core Dependencies  
+- **torch>=2.0.0** – Deep learning framework for model training and inference  
+- **torchvision>=0.15.0** – Computer vision utilities and datasets  
+- **timm>=0.9.0** – Access to advanced backbones (e.g., Swin Transformer, ViT)  
+- **transformers>=4.30.0** – Pretrained language/vision models from HuggingFace  
+- **pytorch-lightning>=2.0.0** – High-level training loop abstraction (optional but recommended)  
+
+### Scientific & Utility Libraries  
+- **numpy>=1.23.0** – Numerical computations  
+- **scipy>=1.10.0** – Scientific computing utilities  
+- **scikit-learn>=1.2.0** – Metrics, preprocessing, and ML utilities  
+- **pandas>=2.0.0** – Data manipulation and analysis  
+- **tqdm>=4.65.0** – Progress bar for training and evaluation  
+
+### Graph & Attention Modules  
+- **networkx>=3.0** – Graph construction and manipulation  
+- **einops>=0.6.0** – Flexible tensor operations for attention mechanisms  
+- **torchmetrics>=0.11.0** – Standardized evaluation metrics  
+
+### Visualization & Augmentation  
+- **matplotlib>=3.7.0** – Visualization of results and plots  
+- **seaborn>=0.12.2** – Statistical data visualization  
+- **opencv-python>=4.7.0** – Image processing  
+- **albumentations>=1.3.0** – Advanced data augmentation  
+
+### Explainability (Optional but Recommended)  
+- **captum>=0.6.0** – Model interpretability (saliency maps, occlusion, gradients)  
+- **shap>=0.41.0** – SHAP-based explainability methods  
+
+---
+
+### Installation  
+
+Clone the repository and install requirements:  
+
+```bash
+git clone https://github.com/your-username/MGLTC-Net.git
+cd MGLTC-Net
+pip install -r requirements.txt
 
 
