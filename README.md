@@ -10,6 +10,26 @@ Our approach introduces:
 
 To support further research, we also introduce **DAMAGE**, a large-scale, manually annotated benchmark for complex damage assessment.
 
+## 📂 DAMAGE Dataset Access
+
+We introduce **DAMAGE**, a large-scale, manually annotated dataset curated for complex disaster damage assessment. Unlike existing datasets, DAMAGE captures **heterogeneous disaster patterns, fine-grained damage levels, and multi-modal uncertainty factors**, making it a challenging benchmark for real-world applications.
+
+### 🔑 Key Features
+- ✅ **Large-Scale**: Thousands of annotated disaster images across multiple event types.  
+- ✅ **Fine-Grained Labels**: Includes `No Damage`, `Mild Damage`, `Severe Damage`, and other nuanced categories.  
+- ✅ **Multi-Modal Inputs**: Designed to support **text–image fusion** and graph-based reasoning.  
+- ✅ **Explainability Annotations**: Model-guided interpretability features for robust evaluation.  
+
+### 📥 Access
+The dataset will be made available for research purposes under a **CC-BY-NC 4.0 license**.  
+- 🔗 [Request Access Form](#) *(link to be added)*  
+- 📧 For early access, please contact **[Your Name / Lab / Institution]**.  
+
+### ⚖️ Usage Policy
+- The dataset is released **strictly for academic and non-commercial research**.  
+- Users must **cite our paper** when using DAMAGE in publications.  
+- Redistribution or commercial use is prohibited without prior approval.  
+
 
 ## Project Structure: MGLTC-Net
 
