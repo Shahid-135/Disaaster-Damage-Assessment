@@ -15,31 +15,38 @@ To support further research, we also introduce **DAMAGE**, a large-scale, manual
 
 The repository is organized as follows:
 
+# 📂 Project Structure
+
+This repository contains the implementation of **MGLTC-Net: Multi-Representation Graph Learning with Triplet Cross-Attention and Uncertainty-Guided Fusion for Disaster Damage Assessment**.
+
+```bash
 MGLTC-Net/
 │
-├── data/
-│ ├── crisismmd/
-│ └── damage/
+├── data/                  
+│   ├── crisismmd/
+│   └── damage/
 │
-├── models/
-│ ├── mgltc_net.py
-│ ├── semantic_graph.py
-│ ├── triplet_attention.py
-│ └── fusion.py
+├── models/                
+│   ├── mgltc_net.py       
+│   ├── semantic_graph.py  
+│   ├── triplet_attention.py
+│   └── fusion.py          
 │
-├── utils/
-│ ├── metrics.py
-│ ├── losses.py
-│ ├── visualization.py
-│ └── explainability.py
+├── utils/                 
+│   ├── metrics.py
+│   ├── losses.py
+│   ├── visualization.py
+│   └── explainability.py
 │
-├── train.py
-├── evaluate.py
-├── inference.py
+├── train.py               
+├── evaluate.py            
+├── inference.py           
 │
-├── requirements.txt
-├── README.md
-└── LICENSE
+├── configs/               
+│   └── default.yaml       
+│
+├── requirements.txt       
+├── README.md                   
 
 ##Methodology
 
