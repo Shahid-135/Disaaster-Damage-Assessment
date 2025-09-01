@@ -119,7 +119,7 @@ To set up the environment for **MGLTC-Net**, install the following dependencies:
 Clone the repository and install requirements:  
 
 ```bash
-git clone https://github.com/your-username/MGLTC-Net.git
+git clone https://github.com/Shahid-135/MGLTC-Net.git
 cd MGLTC-Net
 pip install -r requirements.txt
 
