@@ -28,7 +28,6 @@ We introduce **DAMAGE**, a large-scale, manually annotated dataset collected fro
 ### 📥 Access
 The dataset will be released for **academic research only** under a **CC-BY-NC 4.0 license**.  
 - 🔗 [Request Access Form](#) *(to be added)*  
-- 📧 Contact: **[Your Name / Lab / Institution]**  
 
 ### ⚖️ Usage Policy
 - Use is **restricted to non-commercial research**.  
