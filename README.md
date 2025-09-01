@@ -97,8 +97,8 @@ To set up the environment for **MGLTC-Net**, install the following dependencies:
 - **pandas>=2.0.0** – Data manipulation and analysis  
 - **tqdm>=4.65.0** – Progress bar for training and evaluation  
 
-### Graph & Attention Modules  
-- **networkx>=3.0** – Graph construction and manipulation  
+### Graph Learning  
+- **spektral>=1.3.0** – Graph neural network library (core for our relational reasoning)  
 - **einops>=0.6.0** – Flexible tensor operations for attention mechanisms  
 - **torchmetrics>=0.11.0** – Standardized evaluation metrics  
 
@@ -122,5 +122,6 @@ Clone the repository and install requirements:
 git clone https://github.com/your-username/MGLTC-Net.git
 cd MGLTC-Net
 pip install -r requirements.txt
+
 
 
