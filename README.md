@@ -1,4 +1,4 @@
-# MGMT-Net:Multimodal Graph-based Multi-scale Triplet Attentive Uncertainty-Guided Network
+# MGLTU-Net: Multi-Representation Graph Learning with Triplet Cross-Attentive Uncertainty-Guided Network
 ## Abstract  
 
 Effective disaster response relies on timely and accurate damage assessment, yet existing methods struggle with ambiguous visual cues, heterogeneous damage patterns, and modality-specific uncertainties.  
