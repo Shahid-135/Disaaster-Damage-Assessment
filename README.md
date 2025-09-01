@@ -15,7 +15,7 @@ To support further research, we also introduce **DAMAGE**, a large-scale, manual
 
 The repository is organized as follows:
 
-# 📂 Project Structure
+## Project Structure
 
 This repository contains the implementation of **MGLTC-Net: Multi-Representation Graph Learning with Triplet Cross-Attention and Uncertainty-Guided Fusion for Disaster Damage Assessment**.
 
