@@ -50,7 +50,7 @@ MGLTC-Net/
 
 ```
 
-##Methodology
+#Methodology
 
 We propose a **multi-representation framework** for disaster damage severity classification that integrates **semantic graph reasoning, multi-scale visual attention, cross-modal alignment, uncertainty-guided fusion, and explainable features**.
 
