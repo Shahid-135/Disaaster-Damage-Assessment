@@ -8,6 +8,6 @@ Our approach introduces:
 2. A **Multi-Scale Triplet Cross-Attention mechanism** to capture spatial dependencies across multiple dimensions.  
 3. An **Uncertainty-Weighted Fusion strategy** that ensures robust integration even under compromised modalities.  
 
-To support further research, we also introduce **DAMAGE**, a large-scale, manually annotated benchmark for complex damage assessment. Extensive experiments on CrisisMMD and DAMAGE demonstrate that our method achieves **state-of-the-art performance**, setting a new standard for disaster damage assessment.
+To support further research, we also introduce **DAMAGE**, a large-scale, manually annotated benchmark for complex damage assessment.
 
 
