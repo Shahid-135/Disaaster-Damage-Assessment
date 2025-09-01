@@ -12,23 +12,28 @@ To support further research, we also introduce **DAMAGE**, a large-scale, manual
 
 ## 📂 DAMAGE Dataset Access
 
-We introduce **DAMAGE**, a large-scale, manually annotated dataset curated for complex disaster damage assessment. Unlike existing datasets, DAMAGE captures **heterogeneous disaster patterns, fine-grained damage levels, and multi-modal uncertainty factors**, making it a challenging benchmark for real-world applications.
+We introduce **DAMAGE**, a large-scale, manually annotated dataset collected from the **2023 Turkey–Syria earthquake**. The dataset is designed to advance research in **automated disaster damage assessment** by providing challenging real-world imagery.  
 
 ### 🔑 Key Features
-- ✅ **Large-Scale**: Thousands of annotated disaster images across multiple event types.  
-- ✅ **Fine-Grained Labels**: Includes `No Damage`, `Mild Damage`, `Severe Damage`, and other nuanced categories.  
-- ✅ **Multi-Modal Inputs**: Designed to support **text–image fusion** and graph-based reasoning.  
-- ✅ **Explainability Annotations**: Model-guided interpretability features for robust evaluation.  
+- ✅ **Event-Specific**: Focused on the **Turkey–Syria earthquake**, ensuring domain relevance.  
+- ✅ **Image-Based Annotations**: The dataset primarily contains **images**, though text information is also available for associated posts.  
+- ✅ **Fine-Grained Labels**: Each image is annotated with one of **four classes**:  
+  - `No Damage`  
+  - `Mild Damage`  
+  - `Severe Damage`  
+  - `Cannot Judge`  
+- ✅ **High-Quality Annotations**: Labels were **manually verified** to minimize ambiguity.  
+- ✅ **Benchmark Ready**: Suitable for **multi-modal fusion**, **graph learning**, and **uncertainty-aware modeling**.  
 
 ### 📥 Access
-The dataset will be made available for research purposes under a **CC-BY-NC 4.0 license**.  
-- 🔗 [Request Access Form](#) *(link to be added)*  
-- 📧 For early access, please contact **[Your Name / Lab / Institution]**.  
+The dataset will be released for **academic research only** under a **CC-BY-NC 4.0 license**.  
+- 🔗 [Request Access Form](#) *(to be added)*  
+- 📧 Contact: **[Your Name / Lab / Institution]**  
 
 ### ⚖️ Usage Policy
-- The dataset is released **strictly for academic and non-commercial research**.  
-- Users must **cite our paper** when using DAMAGE in publications.  
-- Redistribution or commercial use is prohibited without prior approval.  
+- Use is **restricted to non-commercial research**.  
+- Proper **citation of our paper and dataset** is required.  
+- Redistribution or modification without permission is prohibited.  
 
 
 ## Project Structure: MGLTC-Net
