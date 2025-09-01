@@ -10,73 +10,74 @@ Our approach introduces:
 
 To support further research, we also introduce **DAMAGE**, a large-scale, manually annotated benchmark for complex damage assessment.
 
+# Methodology
 
-Methodology
+We propose a **multi-representation framework** for disaster damage severity classification that integrates **semantic graph reasoning, multi-scale visual attention, cross-modal alignment, uncertainty-guided fusion, and explainable features**.
 
-We propose a multi-representation framework for disaster damage severity classification that integrates semantic graph reasoning, multi-scale visual attention, cross-modal alignment, uncertainty-guided fusion, and explainable features.
+---
 
-1. Semantic Class-Aware Graph Adjacency Refinement (SCAR)
+## 1. Semantic Class-Aware Graph Adjacency Refinement (SCAR)
 
-Construct a class-aware graph using cosine similarity between pooled class prototypes.
+- Construct a **class-aware graph** using cosine similarity between pooled class prototypes.  
+- Refine adjacency by **reinforcing intra-class edges** and attenuating inter-class ones.  
+- Apply **GraphSAGE** for message passing to capture context-aware structural dependencies.  
+- Produces **discriminative, semantically smooth embeddings** useful for fine-grained classification.
 
-Refine adjacency by reinforcing intra-class edges and attenuating inter-class ones.
+---
 
-Apply GraphSAGE for message passing to capture context-aware structural dependencies.
+## 2. Feature Extraction
 
-Produces discriminative, semantically smooth embeddings useful for fine-grained classification.
+We adopt the **Swin Transformer** backbone to extract:
 
-2. Feature Extraction
+- **Global representation**: pooled feature vector `x_i ∈ ℝ^F`.  
+- **Local representation**: patch-level features `H_i ∈ ℝ^(P × F)`.
 
-We adopt the Swin Transformer backbone to extract:
+These serve as inputs for **graph modeling** and **attention modules**.
 
-Global representation: pooled feature vector $x_i \in \mathbb{R}^F$.
+---
 
-Local representation: patch-level features $H_i \in \mathbb{R}^{P \times F}$.
-
-These serve as inputs for graph modeling and attention modules.
-
-3. Multi-Scale Triplet Cross-Attention (MSTCA)
+## 3. Multi-Scale Triplet Cross-Attention (MSTCA)
 
 MSTCA models dependencies along three complementary dimensions:
 
-Channel Attention (CA): highlights semantic feature importance.
+- **Channel Attention (CA):** highlights semantic feature importance.  
+- **Height Attention (HA):** captures vertical spatial dependencies.  
+- **Width Attention (WA):** captures horizontal spatial dependencies.  
 
-Height Attention (HA): captures vertical spatial dependencies.
+The outputs are fused via **adaptive softmax weighting** with global context modulation.  
+A **cross-dimensional self-attention** refines the joint representation, enhancing robustness to visual ambiguity.
 
-Width Attention (WA): captures horizontal spatial dependencies.
+---
 
-The outputs are fused via adaptive softmax weighting with global context modulation. A cross-dimensional self-attention refines the joint representation, enhancing robustness to visual ambiguity.
+## 4. Cross-Modal Graph Refinement (CMGR)
 
-4. Cross-Modal Graph Refinement (CMGR)
+- Project visual embeddings into graph space.  
+- Use **visual embeddings as queries** in a multi-head attention mechanism over graph embeddings.  
+- Fuse refined and original features via a **learnable gating mechanism**.  
+- Result: **visually grounded graph features** that bridge semantic reasoning with visual cues.
 
-Project visual embeddings into graph space.
+---
 
-Use visual embeddings as queries in a multi-head attention mechanism over graph embeddings.
+## 5. Uncertainty-Weighted Fusion (UWF)
 
-Fuse refined and original features via a learnable gating mechanism.
+- Map both **graph** and **visual** features into a shared latent space.  
+- Estimate **epistemic uncertainty** via *Monte Carlo dropout*.  
+- Compute **adaptive fusion weights**: modalities with lower uncertainty receive higher weights.  
+- Ensures stable and reliable performance even when one modality is compromised.
 
-Result: visually grounded graph features that bridge semantic reasoning with visual cues.
+---
 
-5. Uncertainty-Weighted Fusion (UWF)
-
-Map both graph and visual features into a shared latent space.
-
-Estimate epistemic uncertainty via Monte Carlo dropout.
-
-Compute adaptive fusion weights: modalities with lower uncertainty receive higher weights.
-
-Ensures stable and reliable performance even when one modality is compromised.
-
-6. Explainable Features
+## 6. Explainable Features
 
 We enhance interpretability by incorporating:
 
-Saliency maps
+- **Saliency maps**  
+- **Occlusion sensitivity analysis**  
+- **Gradient-based activations**  
+- **Structural descriptors**
 
-Occlusion sensitivity analysis
+These explainable features provide **transparent justifications** for model predictions — critical for trust and adoption in disaster response.
 
-Gradient-based activations
+---
 
-Structural descriptors
 
-These explainable features provide transparent justifications for model predictions — critical for trust and adoption in disaster response.
