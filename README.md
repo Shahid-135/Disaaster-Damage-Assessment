@@ -46,7 +46,9 @@ MGLTC-Net/
 │   └── default.yaml       
 │
 ├── requirements.txt       
-├── README.md                   
+├── README.md
+
+```
 
 ##Methodology
 
