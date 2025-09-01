@@ -44,7 +44,7 @@ We introduce **DAMAGE**, a large-scale, manually annotated dataset collected fro
 ### 📝 How to Request Access  
 
 1. **Important:** Use your **institutional email address** when submitting the form. Requests from personal email addresses will not be considered.  
-2. First, please fill out this [Consent Form](https://docs.google.com/document/d/1xqshqL6nlss246QZSY6TE0kWtAbhRbxK/edit?usp=sharing&ouid=117095985932126675899&rtpof=true&sd=true).  
+2. First, please fill out this [Consent Form](https://docs.google.com/document/d/11q8P7ON4D032Er7u4kDHxen6RH3Q7wnZV8yB2gtVjd4/edit?usp=sharing).  
 3. Then upload it in the [Dataset Request Form](https://docs.google.com/forms/d/e/1FAIpQLSevuAPDoaN48lHgaoF9qpKsnc_5o-BKjyQvTBnUq4zAmUIdyg/viewform?usp=header) along with your details.  
 
 Once your request is reviewed and approved, you will receive an email with instructions on how to download the dataset.  
