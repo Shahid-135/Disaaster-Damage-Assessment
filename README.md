@@ -17,22 +17,37 @@ We introduce **DAMAGE**, a large-scale, manually annotated dataset collected fro
 ### 🔑 Key Features
 - ✅ **Event-Specific**: Focused on the **Turkey–Syria earthquake**, ensuring domain relevance.  
 - ✅ **Image-Based Annotations**: The dataset primarily contains **images**, though text information is also available for associated posts.  
-- ✅ **Fine-Grained Labels**: Each image is annotated with one of **four classes**:  
+- ✅ **Four Damage Classes**: Each image is annotated into one of the following:  
   - `No Damage`  
   - `Mild Damage`  
   - `Severe Damage`  
   - `Cannot Judge`  
-- ✅ **High-Quality Annotations**: Labels were **manually verified** to minimize ambiguity.  
-- ✅ **Benchmark Ready**: Suitable for **multi-modal fusion**, **graph learning**, and **uncertainty-aware modeling**.  
+- ✅ **High-Quality Labels**: Verified by multiple annotators to reduce ambiguity.  
+- ✅ **Benchmark Ready**: Useful for **multi-modal fusion**, **graph learning**, and **uncertainty-aware modeling**.  
 
-### 📥 Access
-The dataset will be released for **academic research only** under a **CC-BY-NC 4.0 license**.  
-- 🔗 [Request Access Form](#) *(to be added)*  
+---
 
-### ⚖️ Usage Policy
-- Use is **restricted to non-commercial research**.  
-- Proper **citation of our paper and dataset** is required.  
-- Redistribution or modification without permission is prohibited.  
+## 📜 Dataset Access Policy  
+
+**Access to the dataset is restricted to academic and research purposes. To request access, please ensure compliance with the following requirements:**  
+
+- **Non-Commercial Use**: The dataset is provided exclusively for academic research and non-commercial purposes. Any form of commercial use, direct or indirect, is strictly prohibited. It must not be used to develop or market commercial products or services.  
+
+- **No Redistribution**: The dataset must not be redistributed, republished, or shared in any form, whether in full or in part, across any public or private repositories, platforms, or social media. Users must store the dataset in secure environments and ensure that unauthorized parties do not gain access.  
+
+- **Compliance with Platform Policies**: As this dataset is derived from publicly available Twitter (now X) data, users must comply with the platform's Developer Agreement and Policies. This includes adhering to data usage and privacy guidelines, ensuring that no actions breach content redistribution rules.  
+
+- **Academic Integrity**: The dataset must only be used for legitimate academic research. Researchers are responsible for ensuring that their use of the dataset does not contravene any ethical standards, particularly regarding data privacy and responsible usage.  
+
+---
+
+### 📝 How to Request Access  
+
+1. **Important:** Use your **institutional email address** when submitting the form. Requests from personal email addresses will not be considered.  
+2. First, please fill out this [Consent Form](https://docs.google.com/document/d/1xqshqL6nlss246QZSY6TE0kWtAbhRbxK/edit?usp=sharing&ouid=117095985932126675899&rtpof=true&sd=true).  
+3. Then upload it in the [Dataset Request Form](https://docs.google.com/forms/d/e/1FAIpQLSdklbRkvXfqMp9tKQj-Ue1oFy-XKVIkv_DqARgyjwWLJxracg/viewform?embedded=true) along with your details.  
+
+Once your request is reviewed and approved, you will receive an email with instructions on how to download the dataset.  
 
 
 ## Project Structure: MGLTC-Net
