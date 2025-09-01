@@ -9,49 +9,54 @@ Our approach introduces:
 3. An **Uncertainty-Weighted Fusion strategy** that ensures robust integration even under compromised modalities.  
 
 To support further research, we also introduce **DAMAGE**, a large-scale, manually annotated benchmark for complex damage assessment.
+
+
+# 📂 Project Structure: MGLTC-Net
+
+The repository is organized as follows:
+
 MGLTC-Net/
 │
-├── configs/                        # YAML/JSON configs for experiments
-│   ├── default.yaml
-│   └── crisismmd.yaml
+├── configs/ # YAML/JSON configs for experiments
+│ ├── default.yaml
+│ └── crisismmd.yaml
 │
-├── data/                           # Placeholder for datasets
-│   ├── DAMAGE/
-│   └── CrisisMMD/
+├── data/ # Placeholder for datasets
+│ ├── DAMAGE/
+│ └── CrisisMMD/
 │
-├── datasets/                       # Dataset loaders
-│   ├── __init__.py
-│   ├── crisismmd.py
-│   ├── damage.py
-│   └── transforms.py               # Data augmentations
+├── datasets/ # Dataset loaders
+│ ├── init.py
+│ ├── crisismmd.py
+│ ├── damage.py
+│ └── transforms.py # Data augmentations
 │
-├── models/                         # Model components
-│   ├── __init__.py
-│   ├── mgltc_net.py                # Main model (MGLTC-Net)
-│   ├── semantic_graph.py           # Semantic Class-Aware Graph module
-│   ├── triplet_attention.py        # Multi-Scale Triplet Cross-Attention
-│   └── fusion.py                   # Uncertainty-Weighted Fusion
+├── models/ # Model components
+│ ├── init.py
+│ ├── mgltc_net.py # Main model (MGLTC-Net)
+│ ├── semantic_graph.py # Semantic Class-Aware Graph module
+│ ├── triplet_attention.py # Multi-Scale Triplet Cross-Attention
+│ └── fusion.py # Uncertainty-Weighted Fusion
 │
-├── utils/                          # Helper functions
-│   ├── __init__.py
-│   ├── metrics.py                  # Evaluation metrics
-│   ├── losses.py                   # Custom loss functions
-│   ├── explainability.py           # Explainability functions (Captum, SHAP)
-│   └── visualization.py            # Plots and result visualizations
+├── utils/ # Helper functions
+│ ├── init.py
+│ ├── metrics.py # Evaluation metrics
+│ ├── losses.py # Custom loss functions
+│ ├── explainability.py # Explainability functions (Captum, SHAP)
+│ └── visualization.py # Plots and result visualizations
 │
-├── experiments/                    # Training and evaluation scripts
-│   ├── train.py                    # Main training loop
-│   ├── evaluate.py                 # Model evaluation
-│   └── inference.py                # Inference on new images
+├── experiments/ # Training and evaluation scripts
+│ ├── train.py # Main training loop
+│ ├── evaluate.py # Model evaluation
+│ └── inference.py # Inference on new images
 │
-├── requirements.txt                # Dependencies
-├── requirements.md                 # Dependency documentation
-├── README.md                       # Project overview
-├── LICENSE                         # License file
-└── setup.py                        # Installable package (optional)
+├── requirements.txt # Dependencies
+├── requirements.md # Dependency documentation
+├── README.md # Project overview
+├── LICENSE # License file
+└── setup.py # Installable package (optional)
 
-
-# Methodology
+##Methodology
 
 We propose a **multi-representation framework** for disaster damage severity classification that integrates **semantic graph reasoning, multi-scale visual attention, cross-modal alignment, uncertainty-guided fusion, and explainable features**.
 
