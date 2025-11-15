@@ -14,5 +14,5 @@ albumentations>=1.3.0    # For data augmentations
 einops>=0.6.0            # For tensor operations in attention modules
 tqdm>=4.65.0             # For progress bars
 pandas>=2.0.0
-torchmetrics>=0.11.0     # For evaluation metrics
+torchmetrics>=0.11.0     
 
