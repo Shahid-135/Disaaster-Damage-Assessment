@@ -114,7 +114,7 @@ These serve as inputs for **graph modeling** and **attention modules**.
 
 ---
 
-## 3. Multi-Scale Triplet Cross-Attention (MSTCA)
+## 3. Tri-Axial Cross-Dimensional Attention (TCDA)
 
 MSTCA models dependencies along three complementary dimensions:
 
