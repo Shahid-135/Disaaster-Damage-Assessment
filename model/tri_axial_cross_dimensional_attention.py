@@ -184,4 +184,3 @@ class TriAxialCrossAttention(tf.keras.layers.Layer):
         cfg = super().get_config()
         cfg.update({"reduction_ratio": self.reduction_ratio, "attn_dim": self.attn_dim, "l1_lambda": self.l1_lambda})
         return cfg
-
