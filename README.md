@@ -74,10 +74,7 @@ MGLTC-Net/
 ├── utils/                 
 │   ├── metrics.py
 │   ├── visualization.py
-│
-├── train.py               
-├── evaluate.py            
-├── inference.py                
+│               
 ├── requirements.txt       
 ├── README.md
 
