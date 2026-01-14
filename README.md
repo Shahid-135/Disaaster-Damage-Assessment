@@ -73,10 +73,10 @@ MGLTC-Net/
 │
 ├── utils/                 
 │   ├── metrics.py
-│   ├── visualization.py
+│   └──  visualization.py
 │               
 ├── requirements.txt       
-├── README.md
+└──  README.md
 
 ```
 # Methodology
