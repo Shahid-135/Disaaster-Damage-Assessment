@@ -79,11 +79,7 @@ MGLTC-Net/
 │
 ├── train.py               
 ├── evaluate.py            
-├── inference.py           
-│
-├── configs/               
-│   └── default.yaml       
-│
+├── inference.py                
 ├── requirements.txt       
 ├── README.md
 
