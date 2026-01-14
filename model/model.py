@@ -643,78 +643,64 @@ with open(os.path.join(save_dir, "local_metrics.json"), "w") as f:
 per_class_df.to_csv(os.path.join(save_dir, "per_class_metrics.csv"))
 
 # -------------------------------
+save_dir = "results2"  # Change to your desired output path
+os.makedirs(save_dir, exist_ok=True)
 
-# import os
-# import numpy as np
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-# import pandas as pd
-# import json
+# Per-class metrics
+report = classification_report(test_labels, y_prediction, output_dict=True)
+per_class_df = pd.DataFrame(report).transpose()
 
-# from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_score,classification_report, confusion_matrix, roc_curve, auc,precision_recall_curve)
-# from sklearn.preprocessing import label_binarize
+# Confusion Matrix
+cm = confusion_matrix(test_labels, y_prediction)
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
+plt.title("Confusion Matrix")
+plt.xlabel("Predicted Label")
+plt.ylabel("True Label")
+plt.tight_layout()
+plt.savefig(os.path.join(save_dir, "confusion_matrix.png"))
+plt.close()
+plt.show()
 
-# import os
+# PR and ROC Curves
+n_classes = len(np.unique(test_labels))
+y_true_bin = label_binarize(test_labels, classes=np.arange(n_classes))
+y_pred_prob = y_prediction if y_prediction.ndim > 1 else label_binarize(y_prediction, classes=np.arange(n_classes))
 
-# # Define the save directory
-# save_dir = "results2"  # Change to your desired output path
-# os.makedirs(save_dir, exist_ok=True)
+# Precision-Recall Curve
+plt.figure(figsize=(10, 7))
+for i in range(n_classes):
+    precision, recall, _ = precision_recall_curve(y_true_bin[:, i], y_pred_prob[:, i])
+    plt.plot(recall, precision, label=f"Class {i}")
+plt.xlabel("Recall")
+plt.ylabel("Precision")
+plt.title("Precision-Recall Curves")
+plt.legend()
+plt.grid(True)
+plt.savefig(os.path.join(save_dir, "precision_recall_curve.png"))
+plt.close()
+plt.show()
 
-# # Per-class metrics
-# report = classification_report(test_labels, y_prediction, output_dict=True)
-# per_class_df = pd.DataFrame(report).transpose()
+# ROC Curve
+plt.figure(figsize=(10, 7))
+for i in range(n_classes):
+    fpr, tpr, _ = roc_curve(y_true_bin[:, i], y_pred_prob[:, i])
+    roc_auc = auc(fpr, tpr)
+    plt.plot(fpr, tpr, label=f"Class {i} (AUC = {roc_auc:.2f})")
+plt.plot([0, 1], [0, 1], "k--")
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
+plt.title("ROC Curves")
+plt.legend()
+plt.grid(True)
+plt.savefig(os.path.join(save_dir, "roc_curve.png"))
+plt.close()
+plt.show()
 
-# # Confusion Matrix
-# cm = confusion_matrix(test_labels, y_prediction)
-# plt.figure(figsize=(8, 6))
-# sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
-# plt.title("Confusion Matrix")
-# plt.xlabel("Predicted Label")
-# plt.ylabel("True Label")
-# plt.tight_layout()
-# plt.savefig(os.path.join(save_dir, "confusion_matrix.png"))
-# plt.close()
-# plt.show()
+# Save metrics and report
+with open(os.path.join(save_dir, "local_metrics.json"), "w") as f:
+    json.dump(metrics, f, indent=4)
 
-# # PR and ROC Curves
-# n_classes = len(np.unique(test_labels))
-# y_true_bin = label_binarize(test_labels, classes=np.arange(n_classes))
-# y_pred_prob = y_prediction if y_prediction.ndim > 1 else label_binarize(y_prediction, classes=np.arange(n_classes))
-
-# # Precision-Recall Curve
-# plt.figure(figsize=(10, 7))
-# for i in range(n_classes):
-#     precision, recall, _ = precision_recall_curve(y_true_bin[:, i], y_pred_prob[:, i])
-#     plt.plot(recall, precision, label=f"Class {i}")
-# plt.xlabel("Recall")
-# plt.ylabel("Precision")
-# plt.title("Precision-Recall Curves")
-# plt.legend()
-# plt.grid(True)
-# plt.savefig(os.path.join(save_dir, "precision_recall_curve.png"))
-# plt.close()
-# plt.show()
-
-# # ROC Curve
-# plt.figure(figsize=(10, 7))
-# for i in range(n_classes):
-#     fpr, tpr, _ = roc_curve(y_true_bin[:, i], y_pred_prob[:, i])
-#     roc_auc = auc(fpr, tpr)
-#     plt.plot(fpr, tpr, label=f"Class {i} (AUC = {roc_auc:.2f})")
-# plt.plot([0, 1], [0, 1], "k--")
-# plt.xlabel("False Positive Rate")
-# plt.ylabel("True Positive Rate")
-# plt.title("ROC Curves")
-# plt.legend()
-# plt.grid(True)
-# plt.savefig(os.path.join(save_dir, "roc_curve.png"))
-# plt.close()
-# plt.show()
-
-# # Save metrics and report
-# with open(os.path.join(save_dir, "local_metrics.json"), "w") as f:
-#     json.dump(metrics, f, indent=4)
-
-# per_class_df.to_csv(os.path.join(save_dir, "per_class_metrics.csv"))
+per_class_df.to_csv(os.path.join(save_dir, "per_class_metrics.csv"))
 
 
