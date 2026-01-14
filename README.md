@@ -175,22 +175,9 @@ To set up the environment for **MGLTC-Net**, install the following dependencies:
 - **matplotlib>=3.7.0** – Visualization of results and plots  
 - **seaborn>=0.12.2** – Statistical data visualization  
 - **opencv-python>=4.7.0** – Image processing  
-- **albumentations>=1.3.0** – Advanced data augmentation  
 
-### Explainability (Optional but Recommended)  
-- **captum>=0.6.0** – Model interpretability (saliency maps, occlusion, gradients)  
-- **shap>=0.41.0** – SHAP-based explainability methods  
 
----
 
-### Installation  
-
-Clone the repository and install requirements:  
-
-```bash
-git clone https://github.com/Shahid-135/MGLTC-Net.git
-cd MGLTC-Net
-pip install -r requirements.txt
 
 
 
