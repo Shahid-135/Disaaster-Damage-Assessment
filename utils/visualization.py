@@ -90,4 +90,4 @@ for row_idx, (img_name, damage_label) in enumerate(image_info.items()):
 
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 plt.savefig("heavily_noised_images.png", dpi=300)
-plt.show()
+plt.show() 
